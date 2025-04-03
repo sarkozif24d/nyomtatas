@@ -1,8 +1,8 @@
 function kalkulal(){
    
     //Űrlapadatok
-    const szelesseg=297;
-    const magassag=420;
+    const szelesseg=document.getElementById('szelesseg').value;
+    const magassag=document.getElementById('magassag').value;
     const papir=document.getElementById('papirtipus').value;
 
     //Számítások
@@ -10,6 +10,9 @@ function kalkulal(){
     let koltseg=terulet*papir;
     
     //Megjelenítés
+    document.getElementById('papir').innerHTML = papir
+    document.getElementById('terulet').innerHTML = terulet;
     document.getElementById('valasz').style.visibility = "visible";
+    document.getElementById('koltseg').innerHTML = koltseg
 }
 
